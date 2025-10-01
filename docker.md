@@ -37,4 +37,26 @@
 
 ## Ejercicio 4: Orquestación básica con Docker Compose
 
+### Creamos el archivo yml 
+
+![cap9](9.png)
+
+### Aqui comprobamos que funciona
+
+![cap10](10.png)
+
+## Ejercicio 5: Despliegue de Nextcloud
+
+### Activamos el contenedor de cloud con el puerto 8099
+
+![cap11](11.png)
+
+### Aqui comprobamos que funciona
+
+![cap12](12.png)
+
+## DAVID MORENO RODRIGUEZ
+
+
+
 
