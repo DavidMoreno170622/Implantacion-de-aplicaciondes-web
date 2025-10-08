@@ -3,57 +3,57 @@
 ## Ejercicio 1: Servidor Nginx en modo demonio
 
 ### Aqui tenemos como ejecutamos el contenedor ed nginx en segundo plano y vemos como funciona a partir de la pagina de localhost por el puerto 8080
-![cap1](1.png)
+![cap1](./capturas/1.png)
 
 ### y asi veriamos el log 
 
-![cap2](2.png)
+![cap2](./capturas/2.png)
 
 ## Ejercicio 2: Uso de volúmenes en Nginx
 
 ### Creamos un directorio y dentro de este un fichero html simple
 
-![cap3](3.png)
+![cap3](./capturas/3.png)
 
 ### Despues creamos un contenedor que coga de referencia nuestra pagina web, habra que cambiar el puerto ya que el 8080 esta utilizandose, a no ser de que li cerremos, si cambiamos el fichero podemos ver como entrando al localhost lo vemos modificado
 
-![cap4](4.png)
+![cap4](./capturas/4.png)
 
-![cap5](5.png)
+![cap5](./capturas/5.png)
 
 ## Ejercicio 3: Construcción de una imagen con Dockerfile
 
 ### Creamos el docker file con este contenido
 
-![cap6](6.png)
+![cap6](./capturas/6.png)
 
 ### Creamos la imagen de nginx y el fichero html correspondiente
 
-![cap7](7.png)
+![cap7](./capturas/7.png)
 
 ### Ahora hacemos que se ejecute en segundo plano y entramos en el local host del puerto que hemos indicado, y nos sale el contenido del fichero html correspondiente
 
-![cap8](8.png)
+![cap8](./capturas/8.png)
 
 ## Ejercicio 4: Orquestación básica con Docker Compose
 
 ### Creamos el archivo yml 
 
-![cap9](9.png)
+![cap9](./capturas/9.png)
 
 ### Aqui comprobamos que funciona
 
-![cap10](10.png)
+![cap10](./capturas/10.png)
 
 ## Ejercicio 5: Despliegue de Nextcloud
 
 ### Activamos el contenedor de cloud con el puerto 8099
 
-![cap11](11.png)
+![cap11](./capturas/11.png)
 
 ### Aqui comprobamos que funciona
 
-![cap12](12.png)
+![cap12](./capturas/12.png)
 
 ## DAVID MORENO RODRIGUEZ
 
