@@ -3,7 +3,6 @@ version: "3.8"
 services:
   apache_php:
     image: php:8.2-apache
-    container_name: apache_php
     ports:
       - "8081:80"
     volumes:
