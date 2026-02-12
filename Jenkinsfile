@@ -10,7 +10,10 @@ pipeline {
 
         stage('Levantar LAMP con Docker') {
             steps {
-                sh 'docker-compose up -d'
+                sh '''
+                docker-compose down || true
+                docker-compose up -d
+                '''
             }
         }
 
