@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/DavidMoreno170622/Implantacion-de-aplicaciondes-web.git'
+            }
+        }
+
+        stage('Levantar LAMP con Docker') {
+            steps {
+                sh '''
+                docker-compose down || true
+                docker-compose up -d
+                '''
+            }
+        }
+
+        stage('Desplegar CRUD') {
+            steps {
+                sh '''
+                cp php/POO/listado.php www/
+                cp php/POO/info.php    www/
+                cp php/POO/edit.php    www/
+                cp php/POO/delete.php  www/
+                '''
+            }
+        }
+
+        stage('Comprobación') {
+            steps {
+                sh '''
+                ls -l www
+                docker ps
+                '''
+            }
+        }
+    }
+}
