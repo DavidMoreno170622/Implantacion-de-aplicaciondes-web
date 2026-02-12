@@ -19,7 +19,8 @@ pipeline {
 
         stage('Desplegar CRUD') {
             steps {
-                sh 'cp -r php/POO/* /opt/mi_crud_docker/www/'
+                echo "Copiando archivos PHP al directorio www..."
+                sh 'cp -r php/POO/* www/'
             }
         }
 
