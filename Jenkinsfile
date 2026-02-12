@@ -2,39 +2,27 @@ pipeline {
     agent any
 
     stages {
-
         stage('Checkout') {
             steps {
-                git 'https://github.com/DavidMoreno170622/Implantacion-de-aplicaciondes-web.git'
+                echo 'Código descargado desde Git'
             }
         }
 
         stage('Levantar LAMP con Docker') {
             steps {
-                sh '''
-                docker-compose down || true
-                docker-compose up -d
-                '''
+                sh 'docker-compose up -d'
             }
         }
 
         stage('Desplegar CRUD') {
             steps {
-                sh '''
-                cp php/POO/listado.php www/
-                cp php/POO/info.php    www/
-                cp php/POO/edit.php    www/
-                cp php/POO/delete.php  www/
-                '''
+                sh 'cp -r php/POO/* /opt/mi_crud_docker/www/'
             }
         }
 
         stage('Comprobación') {
             steps {
-                sh '''
-                ls -l www
-                docker ps
-                '''
+                sh 'ls -l /opt/mi_crud_docker/www/'
             }
         }
     }
